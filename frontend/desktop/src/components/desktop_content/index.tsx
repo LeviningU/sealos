@@ -27,6 +27,7 @@ import { useQuery } from '@tanstack/react-query';
 import { UserInfo } from '@/api/auth';
 import TaskModal from '../task/taskModal';
 import FloatingTaskButton from '../task/floatButton';
+import Banner from '../banner';
 
 const AppDock = dynamic(() => import('../AppDock'), { ssr: false });
 const FloatButton = dynamic(() => import('@/components/floating_button'), { ssr: false });
@@ -176,12 +177,13 @@ export default function Desktop(props: any) {
       backgroundSize={'cover'}
       position={'relative'}
     >
+      <Banner />
       <ChakraIndicator />
       <Flex
         gap={'8px'}
         width={'100%'}
         height={'calc(100% - 87px)'}
-        pt={'24px'}
+        pt={'60px'}
         px={'24px'}
         mx={'auto'}
         maxW={'1300px'}
