@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 const NonePage = () => {
   const router = useRouter();
   useEffect(() => {
-    router.push('/dbs');
+    router.push('/setting');
   }, [router]);
 
   return <div></div>;

@@ -1,4 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import { Box } from '@chakra-ui/react';
+import Sidebar from '@/components/Sidebar';
 
 export default function Document() {
   return (
