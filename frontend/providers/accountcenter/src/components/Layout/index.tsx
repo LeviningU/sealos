@@ -2,8 +2,10 @@ import Sidebar from '@/components/Sidebar';
 import { Flex, Box, Text, Center } from '@chakra-ui/react';
 import type { ReactNode } from 'react';
 import MyIcon from '@/components/Icon';
+import { useTranslation } from 'next-i18next';
 
 function Layout({ children }: { children?: ReactNode }) {
+  const { t } = useTranslation();
   return (
     <>
       <Flex
@@ -24,7 +26,7 @@ function Layout({ children }: { children?: ReactNode }) {
             <MyIcon name="logo" w={'28px'} h={'28px'} />
           </Center>
           <Text fontSize={'24px'} fontWeight={600} lineHeight={'32px'}>
-            Account Center
+            {t('AccountCenter')}
           </Text>
         </Flex>
       </Flex>

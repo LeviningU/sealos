@@ -241,5 +241,10 @@
   "first_recharge_title": "Get Double with Initial Purchase!",
   "credit_purchase": "Credit Purchase",
   "remaining_balance": "Remaining Balance",
-  "custom_amount": "Custom Amount"
+  "custom_amount": "Custom Amount",
+  "AccountCenter": "AccountCenter",
+  "Billing": "Billing",
+  "Plan": "Plan",
+  "Setting": "AccountSetting",
+  "Usage": "Usage"
 }

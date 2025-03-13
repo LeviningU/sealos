@@ -13,7 +13,7 @@ export default function Sidebar() {
 
   const siderbarMap = [
     {
-      label: t('AccountCenter'),
+      label: t('Setting'),
       icon: <User width={'16px'} height={'16px'} color={'black'} />,
       path: '/setting'
     },
