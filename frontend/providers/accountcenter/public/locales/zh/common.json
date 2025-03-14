@@ -246,5 +246,21 @@
   "Billing": "支付",
   "Plan": "计划",
   "Setting": "账户设置",
-  "Usage": "用例"
+  "Usage": "用例",
+  "AccountInfomation": "账户信息",
+  "AccountAvatar": "我的头像",
+  "AccountAvatarHint": "支持不超过5MB的PNGs, JPGs",
+  "FormRequiredMessage": "{{label}}是必填项",
+  "FormInvalidEmailMessage": "邮箱格式不正确",
+  "AccountFirstName": "名字",
+  "AccountLastName": "姓氏",
+  "Email": "邮箱",
+  "UpdateInfo": "保存变更",
+  "ConnectedAccounts": "已绑定账号",
+  "github": "Github",
+  "google": "Google",
+  "Connected": "已绑定",
+  "ConnectAccount": "绑定 {{platform}}",
+  "DeleteAccount": "删除账户",
+  "DeleteAccountTip": "一旦删除，您的工作区和内容将无法恢复。"
 }
