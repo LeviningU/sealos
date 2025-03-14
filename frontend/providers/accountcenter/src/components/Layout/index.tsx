@@ -3,11 +3,12 @@ import { Flex, Box, Text, Center } from '@chakra-ui/react';
 import type { ReactNode } from 'react';
 import MyIcon from '@/components/Icon';
 import { useTranslation } from 'next-i18next';
+import { GeistSans } from '@/fonts';
 
 function Layout({ children }: { children?: ReactNode }) {
   const { t } = useTranslation();
   return (
-    <>
+    <div className={GeistSans.className}>
       <Flex
         justify={'space-between'}
         px={'120px'}
@@ -45,7 +46,7 @@ function Layout({ children }: { children?: ReactNode }) {
           {children}
         </Box>
       </Flex>
-    </>
+    </div>
   );
 }
 
