@@ -1,12 +1,14 @@
 import { extendTheme } from '@chakra-ui/react';
 import { theme as SealosTheme } from '@sealos/ui';
-import { checkboxAnatomy } from '@chakra-ui/anatomy';
+import { cardAnatomy, checkboxAnatomy } from '@chakra-ui/anatomy';
 import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
 
 const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(
   checkboxAnatomy.keys
 );
-
+const { defineMultiStyleConfig: defineCardMultiStyleConfig } = createMultiStyleConfigHelpers(
+  cardAnatomy.keys
+);
 const checkbox = defineMultiStyleConfig({
   baseStyle: {
     control: {
@@ -44,5 +46,25 @@ export const theme = extendTheme(SealosTheme, {
       }
     }
   },
-  components: { Checkbox: checkbox }
+  components: {
+    Checkbox: checkbox,
+    Card: defineCardMultiStyleConfig({
+      baseStyle: {
+        red: {},
+        container: {
+          borderRadius: '16px',
+          boxShadow: '0px 1px 2px 0px #0000000D'
+        },
+        header: {
+          padding: '20px 24px 0',
+          fontSize: '18px',
+          fontWeight: '600',
+          lineHeight: '28px'
+        },
+        body: {
+          padding: '14px 24px 24px'
+        }
+      }
+    })
+  }
 });
