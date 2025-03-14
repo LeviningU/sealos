@@ -25,9 +25,7 @@ import { emailRegexp } from '@/utils/regexp';
 import { useQuery } from '@tanstack/react-query';
 import { sealosApp } from 'sealos-desktop-sdk/app';
 import upperFirst from '@/utils/upperFirst';
-import { DeleteIcon } from '@chakra-ui/icons';
-import { colorScheme } from '@/utils/commonStyles';
-import { colors } from '@sealos/ui/src/theme/colors';
+import DeleteAccount from './components/deleteAccount';
 
 function AccountSettings() {
   const [initialized, setInitialized] = useState(false);
@@ -84,7 +82,7 @@ function AccountSettings() {
       return sealosApp.runEvents(`bind${upperFirst(nameKey)}`);
     };
     return (
-      <Flex bg="#F9F9F9" borderRadius="12px" p="12px 16px 12px 12px" alignItems="start">
+      <Flex bg="#F9F9F9" borderRadius="12px" p="12px 16px 12px 12px" alignItems="center">
         <Image flexGrow={0} src={`/images/${nameKey}.svg`} w="36px" h="36px" alt={nameKey} />
         <Box flexGrow={1} px="10px">
           <Text fontWeight={500} fontSize="14px" lineHeight="20px" color="#18181B">
@@ -113,6 +111,7 @@ function AccountSettings() {
         transition="filter .3s"
         direction="column"
         rowGap="16px"
+        pointerEvents={initialized ? undefined : 'none'}
       >
         <Card variant="outline">
           <CardHeader>{t('AccountInfomation')}</CardHeader>
@@ -199,25 +198,7 @@ function AccountSettings() {
             </Flex>
           </CardBody>
         </Card>
-        {/* colorScheme='red' not work here */}
-        <Card {...colorScheme.red.card} variant="outline">
-          <CardBody>
-            <Flex justifyContent="space-between" alignItems="start">
-              <Box>
-                <Text fontSize="18px" fontWeight={600} lineHeight="28px">
-                  {t('DeleteAccount')}
-                </Text>
-                <Text mt="8px" fontSize="14px" lineHeight="18px" color="#71717A">
-                  {t('DeleteAccountTip')}
-                </Text>
-              </Box>
-              {/* colorScheme='red' not work here */}
-              <Button {...colorScheme.red.button} h="40px" leftIcon={<DeleteIcon />}>
-                Delete
-              </Button>
-            </Flex>
-          </CardBody>
-        </Card>
+        <DeleteAccount userName="22jack" />
       </Flex>
     </Layout>
   );
