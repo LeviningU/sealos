@@ -1,6 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 import { theme as SealosTheme } from '@sealos/ui';
-import { checkboxAnatomy } from '@chakra-ui/anatomy';
+import { cardAnatomy, checkboxAnatomy } from '@chakra-ui/anatomy';
 import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
 import { colors } from '@sealos/ui/src/theme/colors';
 import { Button } from '@sealos/ui/src/theme/components/Button';
