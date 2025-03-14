@@ -261,6 +261,10 @@
   "google": "Google",
   "Connected": "已绑定",
   "ConnectAccount": "绑定 {{platform}}",
+  "Cancel": "取消",
+  "Delete": "删除",
   "DeleteAccount": "删除账户",
-  "DeleteAccountTip": "一旦删除，您的工作区和内容将无法恢复。"
+  "DeleteAccountTip": "一旦删除，您的工作区和内容将无法恢复。",
+  "DeleteAccountConfirmAlert": "此操作不可逆。请务必确认。",
+  "DeleteAccountConfirmAlertUserName": "输入您的用户名 <UserName>{{userName}}</UserName> 来确认："
 }
