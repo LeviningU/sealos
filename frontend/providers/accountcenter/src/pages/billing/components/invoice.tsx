@@ -23,54 +23,54 @@ interface InvoiceProps {
 }
 
 const InvoiceData: InvoiceProps[] = [
-  // {
-  //   date: '2021-09-01',
-  //   amount: 'USD 100',
-  //   status: 'Paid',
-  //   desc: 'Invoice Desc',
-  // },
-  // {
-  //   date: '2021-09-02',
-  //   amount: 'USD 200',
-  //   status: 'Due',
-  //   desc: 'Invoice Desc',
-  // },
-  // {
-  //   date: '2021-09-03',
-  //   amount: 'USD 200',
-  //   status: 'Due',
-  //   desc: 'Invoice Desc',
-  // },
-  // {
-  //   date: '2021-09-04',
-  //   amount: 'USD 200',
-  //   status: 'Due',
-  //   desc: 'Invoice Desc',
-  // },
-  // {
-  //   date: '2021-09-05',
-  //   amount: 'USD 200',
-  //   status: 'Due',
-  //   desc: 'Invoice Desc',
-  // },
-  // {
-  //   date: '2021-09-06',
-  //   amount: 'USD 200',
-  //   status: 'Due',
-  //   desc: 'Invoice Desc',
-  // },
-  // {
-  //   date: '2021-09-07',
-  //   amount: 'USD 200',
-  //   status: 'Due',
-  //   desc: 'Invoice Desc',
-  // },
-  // {
-  //   date: '2021-09-08',
-  //   amount: 'USD 200',
-  //   status: 'Due',
-  //   desc: 'Invoice Desc',
-  // }
+  {
+    date: '2021-09-01',
+    amount: 'USD 100',
+    status: 'Paid',
+    desc: 'Invoice Desc'
+  },
+  {
+    date: '2021-09-02',
+    amount: 'USD 200',
+    status: 'Due',
+    desc: 'Invoice Desc'
+  },
+  {
+    date: '2021-09-03',
+    amount: 'USD 200',
+    status: 'Due',
+    desc: 'Invoice Desc'
+  },
+  {
+    date: '2021-09-04',
+    amount: 'USD 200',
+    status: 'Due',
+    desc: 'Invoice Desc'
+  },
+  {
+    date: '2021-09-05',
+    amount: 'USD 200',
+    status: 'Due',
+    desc: 'Invoice Desc'
+  },
+  {
+    date: '2021-09-06',
+    amount: 'USD 200',
+    status: 'Due',
+    desc: 'Invoice Desc'
+  },
+  {
+    date: '2021-09-07',
+    amount: 'USD 200',
+    status: 'Due',
+    desc: 'Invoice Desc'
+  },
+  {
+    date: '2021-09-08',
+    amount: 'USD 200',
+    status: 'Due',
+    desc: 'Invoice Desc'
+  }
 ];
 
 const Invoice = () => {

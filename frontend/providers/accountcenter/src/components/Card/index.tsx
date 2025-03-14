@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import type { ReactNode } from 'react';
 
-function Card({ children, ...props }: { children?: ReactNode; props?: any }) {
+function Card({ children, ...props }: { children?: ReactNode } & any) {
   return (
     <Box
       {...props}
