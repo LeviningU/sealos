@@ -1,32 +1,19 @@
-import Empty from './components/empty';
-import DBList from './components/dbList';
-import { useQuery } from '@tanstack/react-query';
-import { useDBStore } from '@/store/db';
 import { useLoading } from '@/hooks/useLoading';
 import { useState } from 'react';
 import { serviceSideProps } from '@/utils/i18n';
 import Layout from '@/components/Layout';
+import Payment from './components/payment';
+import Invoice from './components/invoice';
 
 function Home() {
-  const { dbList, setDBList } = useDBStore();
   const { Loading } = useLoading();
-  const [initialized, setInitialized] = useState(false);
-
-  const { refetch } = useQuery(['initDbData'], setDBList, {
-    refetchInterval: 3000,
-    onSettled() {
-      setInitialized(true);
-    }
-  });
+  const [initialized, setInitialized] = useState(true);
 
   return (
     <>
       <Layout>
-        {dbList.length === 0 && initialized ? (
-          <Empty />
-        ) : (
-          <DBList dbList={dbList} refetchApps={refetch} />
-        )}
+        <Payment mb={'12px'}></Payment>
+        <Invoice></Invoice>
       </Layout>
       <Loading loading={!initialized} />
     </>

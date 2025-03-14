@@ -1,31 +1,35 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { Button, Box } from '@chakra-ui/react';
-import styles from './empty.module.scss';
-import MyIcon from '@/components/Icon';
-import { useTranslation } from 'next-i18next';
+import React, { ReactNode } from 'react';
+import { Box, Text } from '@chakra-ui/react';
 
-const Empty = () => {
-  const { t } = useTranslation();
-  const router = useRouter();
+const Empty = ({
+  title,
+  description,
+  Icon,
+  ...props
+}: {
+  title?: string;
+  description?: string;
+  Icon?: ReactNode;
+}) => {
   return (
     <Box
-      className={styles.empty}
+      {...props}
       display="flex"
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
       backgroundColor={'white'}
-      px={'32px'}
-      h={'full'}
-      w={'full'}
+      w={'293px'}
       borderRadius={'xl'}
+      py={'24px'}
     >
-      <MyIcon name={'noEvents'} color={'transparent'} width={'80px'} height={'80px'} />
-      <Box py={8}>{t('database_empty')}</Box>
-      <Button w={155} mt={5} variant={'solid'} onClick={() => router.push('/db/edit')}>
-        {t('create_db')}
-      </Button>
+      {Icon}
+      <Text fontSize={'14px'} fontWeight={'600'}>
+        {title}
+      </Text>
+      <Text fontSize={'14px'} fontWeight={'400'} lineHeight={'20px'}>
+        {description}
+      </Text>
     </Box>
   );
 };

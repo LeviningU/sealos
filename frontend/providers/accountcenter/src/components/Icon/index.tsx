@@ -59,7 +59,11 @@ export const IconMap = {
   arrowDown: require('./icons/arrowDown.svg').default,
   docs: require('./icons/docs.svg').default,
   chevronDown: require('./icons/chevron-down.svg').default,
-  overview: require('./icons/overview.svg').default
+  overview: require('./icons/overview.svg').default,
+  visa: require('./icons/visa.svg').default,
+  mastercard: require('./icons/mastercard.svg').default,
+  emptyPayment: require('./icons/emptyPayment.svg').default,
+  emptyInvoice: require('./icons/emptyInvoice.svg').default
 };
 
 const MyIcon = ({
