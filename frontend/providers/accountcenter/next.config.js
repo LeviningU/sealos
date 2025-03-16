@@ -21,6 +21,14 @@ const nextConfig = {
   experimental: {
     // this includes files from the monorepo base two directories up
     outputFileTracingRoot: path.join(__dirname, '../../')
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://account-api.claws.run/api/:path*' // Proxy to Backend
+      }
+    ];
   }
 };
 

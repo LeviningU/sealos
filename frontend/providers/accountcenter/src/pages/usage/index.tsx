@@ -1,4 +1,3 @@
-import Empty from './components/empty';
 import { useLoading } from '@/hooks/useLoading';
 import { useState } from 'react';
 import { serviceSideProps } from '@/utils/i18n';
@@ -19,12 +18,12 @@ function Home() {
       <Layout>
         <Flex justifyContent={'space-between'} mb={'12px'}>
           <Flex w={'334px'}>
-            <Select size={'lg'} placeholder={t('SelectRegion')}>
+            <Select borderRightRadius={'0px'} size={'lg'} placeholder={t('SelectRegion')}>
               <option value="option1">Option 1</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </Select>
-            <Select size={'lg'} placeholder={t('SelectWorkspace')}>
+            <Select borderLeftRadius={'0px'} size={'lg'} placeholder={t('SelectWorkspace')}>
               <option value="option1">Option 1</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
@@ -66,7 +65,7 @@ function Home() {
               <Text fontSize={'18px'} lineHeight={'28px'} fontWeight={600}>
                 {t('TotalCost')}
               </Text>
-              <Flex alignItems={'center'} color={'#1C4EF5'}>
+              <Flex cursor={'pointer'} alignItems={'center'} color={'#1C4EF5'}>
                 <CircleHelp size={'16px'} />
                 <Text ml={'4px'} fontSize={'14px'} lineHeight={'20px'} fontWeight={500}>
                   {t('CostMetrics')}

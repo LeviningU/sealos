@@ -3,7 +3,24 @@ import { useRouter } from 'next/router';
 import MyIcon from '@/components/Icon';
 import { useTranslation } from 'next-i18next';
 import Card from '@/components/Card';
-import { Flex, Text, Tag, TagLabel, IconButton, Button, Center, Box } from '@chakra-ui/react';
+import {
+  Flex,
+  Text,
+  IconButton,
+  Button,
+  Center,
+  Box,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerOverlay,
+  DrawerFooter,
+  DrawerHeader,
+  Table,
+  Tr,
+  Td,
+  Tbody
+} from '@chakra-ui/react';
 import { Ellipsis } from 'lucide-react';
 import {
   ColumnDef,
@@ -58,12 +75,34 @@ const Usage = () => {
   const { t } = useTranslation();
   const router = useRouter();
   const [isLoading, setIsLoading] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const onClose = () => setIsOpen(false);
+  const [selectApp, setSelectApp] = React.useState<UsageProps | null>(null);
   const columns: ColumnDef<UsageProps>[] = React.useMemo(
     () => [
       {
         id: 'appName',
         header: t('AppName'),
-        accessorKey: 'appName'
+        cell: ({ row }) => (
+          <Flex
+            alignItems={'center'}
+            onClick={() => {
+              setIsOpen(true);
+              setSelectApp(row.original);
+            }}
+          >
+            <Text>{row.original.appName}</Text>
+            <IconButton
+              ml={'4px'}
+              size={'sm'}
+              aria-label={'more'}
+              icon={<Ellipsis size={16} />}
+              onClick={() => {
+                console.log('click');
+              }}
+            />
+          </Flex>
+        )
       },
       {
         id: 'appType',
@@ -132,6 +171,39 @@ const Usage = () => {
           </Center>
         }
       />
+      <Drawer isOpen={isOpen} placement="right" onClose={onClose} size={'xl'}>
+        <DrawerOverlay />
+        <DrawerContent borderRadius={'16px'} margin={'8px'} border={'1px solid #E4E4E7'}>
+          <DrawerHeader borderBottom={'1px solid #E4E4E7'}>{selectApp?.appName}</DrawerHeader>
+
+          <DrawerBody borderBottom={'1px solid #E4E4E7'} bg={'#F7F7F9'} padding={'24px'}>
+            <Box>
+              <Text mb={'16px'} fontSize={'16px'} fontWeight={500}>
+                App Launchpad
+              </Text>
+              <Table>
+                <Tbody>
+                  <Tr borderRadius={'16px'} border={'1px solid #E4E4E7'} h={'48px'}>
+                    <Td>CPU</Td>
+                    <Td>
+                      <Text>0.5</Text>core
+                    </Td>
+                    <Td>
+                      $<Text></Text>0.000248
+                    </Td>
+                  </Tr>
+                </Tbody>
+              </Table>
+            </Box>
+          </DrawerBody>
+
+          <DrawerFooter bg={'#F7F7F9'} justifyContent="flex-start">
+            <Button variant="outline" mr={3} onClick={onClose}>
+              Cancel
+            </Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     </Card>
   );
 };

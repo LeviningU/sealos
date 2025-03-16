@@ -464,8 +464,8 @@ importers:
         specifier: ^11.11.0
         version: 11.14.0(@emotion/react@11.14.0)(@types/react@18.2.37)(react@18.2.0)
       '@kubernetes/client-node':
-        specifier: ^0.18.1
-        version: 0.18.1
+        specifier: 0.18.0
+        version: 0.18.0
       '@next/font':
         specifier: 13.1.6
         version: 13.1.6
@@ -500,7 +500,7 @@ importers:
         specifier: ^5.2.1
         version: 5.2.1
       axios:
-        specifier: ^1.5.1
+        specifier: 1.8.3
         version: 1.8.3
       date-fns:
         specifier: ^2.30.0
@@ -645,8 +645,8 @@ importers:
         specifier: ^1.4.10
         version: 1.4.12
       '@types/node':
-        specifier: 18.13.0
-        version: 18.13.0
+        specifier: 18.15.5
+        version: 18.15.5
       '@types/nprogress':
         specifier: ^0.2.1
         version: 0.2.3
@@ -657,17 +657,17 @@ importers:
         specifier: 18.2.37
         version: 18.2.37
       '@types/react-dom':
-        specifier: 18.0.10
-        version: 18.0.10
+        specifier: 18.0.11
+        version: 18.0.11
       '@types/react-syntax-highlighter':
         specifier: ^15.5.7
         version: 15.5.13
       eslint:
-        specifier: 8.33.0
-        version: 8.33.0
+        specifier: 8.36.0
+        version: 8.36.0
       eslint-config-next:
-        specifier: 13.1.6
-        version: 13.1.6(eslint@8.33.0)(typescript@5.2.2)
+        specifier: 13.2.4
+        version: 13.2.4(eslint@8.36.0)(typescript@5.2.2)
       svg-inline-loader:
         specifier: ^0.8.2
         version: 0.8.2
