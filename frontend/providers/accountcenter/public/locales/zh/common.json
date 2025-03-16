@@ -35,7 +35,6 @@
   "Balance Recharge": "余额充值",
   "Order Number": "订单号",
   "Transaction Time": "交易时间",
-  "Type": "类型",
   "CPU": "CPU",
   "Port": "端口",
   "onlyChargedWhenOpenDBPublicAccess": "仅在打开数据库外网访问功能时会计费",
@@ -67,7 +66,6 @@
   "Total": "总数",
   "Page": "页",
   "View Discount Rules": "查看优惠规则",
-  "Cancel": "取消",
   "Not Engough Balance": "余额不足，请立即充值。",
   "Insufficient Balance": "余额不足",
   "No Data Available": "暂无数据",
@@ -292,7 +290,6 @@
   "DeleteAccountConfirmAlert": "此操作不可逆。请务必确认。",
   "DeleteAccountConfirmAlertUserName": "输入您的用户名 <UserName>{{userName}}</UserName> 来确认：",
   "Status": "状态",
-  "Total": "共",
   "TotalApps": "应用总数",
   "TotalCost": "总花费",
   "Type": "类型"
